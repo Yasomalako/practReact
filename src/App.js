@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import Router from './Router.component';
 
-export const pages = ["home","about","desck"]
+export const pages = ["home","about","desck","user","game","adduser"]
 function App() {
   const [page,setPage] = useState("home")
  
@@ -12,8 +12,7 @@ function App() {
     {
      pages.map(pageName=>
     <button onClick={()=>setPage(pageName)}>{pageName}</button>
-  )
-    }
+  )}
     <Router number={0} page={page}/>
    </div>
   );

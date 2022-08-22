@@ -1,5 +1,5 @@
 import React    from "react";
-import template from "./home.jsx";
+import template from "./home.js";
 
 class home extends React.Component {
   render() {
