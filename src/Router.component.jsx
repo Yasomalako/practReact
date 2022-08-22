@@ -6,7 +6,7 @@ export default function Router({ page }) {
         case "about":
             return <AboutPage />            
             case "desck":
-                return <Desck />
+                return <Desck time={0} desckColor={"white"} number={4} />
         default: break
     }
 }
