@@ -1,20 +1,22 @@
 
-import './App.css';
-import { useState } from 'react';
+import './compnentes/App.css'
 import Router from './Router.component';
-
-export const pages = ["home","about","desck","user","game","adduser"]
+import { Link, BrowserRouter } from 'react-router-dom'
+export const pages = ["about", "desck", "user", "game"]
 function App() {
-  const [page,setPage] = useState("home")
- 
+
   return (
-   <div>
-    {
-     pages.map(pageName=>
-    <button onClick={()=>setPage(pageName)}>{pageName}</button>
-  )}
-    <Router number={0} page={page}/>
-   </div>
+    <div>
+      <BrowserRouter>
+      <Link to="/"><button>home</button></Link><br></br>
+      <Link to="pageDonttfind"></Link><br></br>
+        {
+          pages.map(pagePath =>(
+            <Link to={pagePath}><button>{pagePath}</button></Link>
+          ))}
+          <Router />
+      </BrowserRouter>
+    </div>
   );
 }
 
