@@ -1,20 +1,19 @@
 
 import './compnentes/App.css'
 import Router from './Router.component';
-import { Link, BrowserRouter } from 'react-router-dom'
-export const pages = ["about", "desck", "user", "game"]
+import {  BrowserRouter } from 'react-router-dom'
+import {Header} from './compnentes/feuters/header/Header.component';
+import  {Footer}  from './compnentes/feuters/footer/Footer.component';
+import { Navbar } from './compnentes/feuters/nav-bar/Navbar.component';
 function App() {
 
   return (
     <div>
       <BrowserRouter>
-      <Link to="/"><button>home</button></Link><br></br>
-      <Link to="pageDonttfind"></Link><br></br>
-        {
-          pages.map(pagePath =>(
-            <Link to={pagePath}><button>{pagePath}</button></Link>
-          ))}
-          <Router />
+      <Header/>
+      <Navbar/>
+      <Router/>
+      <Footer/>
       </BrowserRouter>
     </div>
   );

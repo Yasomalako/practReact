@@ -1,32 +1,13 @@
 import "./header.css";
 import React from "react";
+import  {Link}  from "react-router-dom";
+export const pages = ["about", "desck", "user", "game"]
 
-export default function Header() {
+export  function Header() {
   return (
-    <nav className="header">
-      <a href="/" className="site-title">
-        site-name
-      </a>
-      <ul>
-        <li>
-          <a href="home">Home</a>
-          </li>
-          <li>
-          <a href="user">User</a>
-          </li>
-          <li>
-          <a href="about">About-us</a>
-          </li>
-          <li>
-          <a href="game">Game</a>
-          </li>
-          <li>
-          <a href="desck">Desck</a>
-          </li>
-          <li>
-          <a href="contactus">Contact-us</a>
-        </li>
-      </ul>
-    </nav>
-)
-  }
+    <div className="header">
+        
+      </div>
+  
+  )
+}
